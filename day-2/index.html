@@ -33,10 +33,12 @@
       //   }
       // });
 
-      const isAdult = people.some(person => {
-        const currentYear = (new Date()).getFullYear();
-        return currentYear - person.year >= 19;
-      });
+      // const isAdult = people.some(person => {
+      //   const currentYear = (new Date()).getFullYear();
+      //   return currentYear - person.year >= 19;
+      // });
+
+      const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
 
       console.log("Is at least one person 19 or older?")
       console.log({isAdult});
